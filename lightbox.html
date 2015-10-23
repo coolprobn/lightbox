@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	 #holder {
+        height: 680px;
+        width: 1245px;
+        background-color: grey;
+        position: relative;
+
+
+     }
+
+     #light-box {
+     	height: 600px;
+     	width: 800px;
+     	background: url("");
+     	background-color: pink;
+     	position: absolute;
+     	top: 50px;
+     	left: 186px;
+     }
+
+     #close-button {
+       height: 10px;
+       width: 10px;
+       background-color: skyblue;
+       position: absolute;
+       top: 10px;
+       left: 1140px;
+
+     }
+	</style>
+</head>
+<body>
+<div><button>click</button></div>
+<div id="holder"><div id="close-button"><button>close</button></div></div>
+
+
+<script type="text/javascript">
+  var holder = document.getElementById('holder');	
+  var lightBox = document.createElement('div');
+  lightBox.id = 'light-box';
+  holder.appendChild(lightBox);
+
+  var close = function() {
+  	
+  }
+
+
+
+</script>
+
+</body>
+</html>
