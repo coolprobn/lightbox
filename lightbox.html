@@ -25,7 +25,7 @@
      #close-button {
        height: 10px;
        width: 10px;
-       background-color: skyblue;
+       background-color: blue;
        position: absolute;
        top: 10px;
        left: 1140px;
@@ -39,14 +39,15 @@
 
 
 <script type="text/javascript">
-  var holder = document.getElementById('holder');	
-  var lightBox = document.createElement('div');
-  lightBox.id = 'light-box';
-  holder.appendChild(lightBox);
+  var $holder = document.getElementById('holder');	
+  var $lightBox = document.createElement('div');
+  $lightBox.id = 'light-box';
+  $holder.appendChild($lightBox);
+  var $closeButton = document.getElementById('close-button');
 
-  var close = function() {
-  	
-  }
+  $closeButton.addEventListener("click", function(){ 
+  	$holder.style.display = 'none'; 
+  });
 
 
 
