@@ -22,19 +22,22 @@
      	left: 186px;
      }
 
+     #open-button {
+       
+
+     }
+
      #close-button {
-       height: 10px;
-       width: 10px;
-       background-color: blue;
        position: absolute;
        top: 10px;
        left: 1140px;
 
      }
+
 	</style>
 </head>
 <body>
-<div><button>click</button></div>
+<div id="open-button"><button>open</button></div>
 <div id="holder"><div id="close-button"><button>close</button></div></div>
 
 
@@ -44,12 +47,15 @@
   $lightBox.id = 'light-box';
   $holder.appendChild($lightBox);
   var $closeButton = document.getElementById('close-button');
+  var $openButton = document.getElementById('open-button');
 
   $closeButton.addEventListener("click", function(){ 
   	$holder.style.display = 'none'; 
   });
 
-
+  $openButton.addEventListener("click", function(){ 
+   $holder.style.display = 'block';
+  });
 
 </script>
 
