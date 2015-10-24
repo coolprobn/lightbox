@@ -56,13 +56,10 @@
   var $openButton = document.createElement('div');
   $openButton.id = 'open-button';
   $mainHolder.appendChild($openButton);
-  $buttonOpen = document.createElement('button');
-  $buttonOpen.className = 'open-button';
-  $openButton.appendChild($buttonOpen);
   $imageOpen = document.createElement('img');
   $imageOpen.className = 'open';
   $imageOpen.src = 'psdHTML.png';
-  $buttonOpen.appendChild($imageOpen);
+  $openButton.appendChild($imageOpen);
 
 
   var $holder = document.createElement('div');
@@ -79,11 +76,9 @@
 
   var $closeButton = document.createElement('div');
   $closeButton.id = 'close-button';
-  $buttonClose = document.createElement('button');
-  $closeButton.appendChild($buttonClose);
   $imageClose = document.createElement('img');
   $imageClose.src = 'closeButton.gif';
-  $buttonClose.appendChild($imageClose); 
+  $closeButton.appendChild($imageClose); 
   $holder.appendChild($closeButton);
   
 
