@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<style type="text/css">
-	 #holder {
+  <title></title>
+  <style type="text/css">
+   #holder {
         height: 680px;
         width: 1245px;
         background-color: grey;
         position: relative;
+        display: none;
 
 
      }
 
      #light-box {
-     	height: 600px;
-     	width: 800px;
-     	background: url("");
-     	background-color: pink;
-     	position: absolute;
-     	top: 50px;
-     	left: 186px;
+      height: 600px;
+      width: 800px;
+      position: absolute;
+      margin-left: 186px;
+      margin-top: 50px;
+          
+     }
+
+     .light-box {
+      height: 600px;
+      width: 800px;
      }
 
      #open-button {
-       
+       position: absolute;
 
+     }
+
+     .open {
+       height: 200px;
+       width: 200px;
      }
 
      #close-button {
        position: absolute;
-       top: 10px;
-       left: 1140px;
-
+       top: 5px;
+       left: 1193px;
      }
 
-	</style>
+  </style>
 </head>
 <body>
-<div id="open-button"><button>open</button></div>
-<div id="holder"><div id="close-button"><button>close</button></div></div>
+<div id="main-holder">
 
+</div>
 
 <script type="text/javascript">
-  var $holder = document.getElementById('holder');	
+  var $mainHolder = document.getElementById('main-holder');
+
+  var $openButton = document.createElement('div');
+  $openButton.id = 'open-button';
+  $mainHolder.appendChild($openButton);
+  $buttonOpen = document.createElement('button');
+  $buttonOpen.className = 'open-button';
+  $openButton.appendChild($buttonOpen);
+  $imageOpen = document.createElement('img');
+  $imageOpen.className = 'open';
+  $imageOpen.src = 'psdHTML.png';
+  $buttonOpen.appendChild($imageOpen);
+
+
+  var $holder = document.createElement('div');
+  $holder.id = 'holder';
+  $mainHolder.appendChild($holder);  
+  
   var $lightBox = document.createElement('div');
   $lightBox.id = 'light-box';
+  $imageLightBox = document.createElement('img');
+  $imageLightBox.className = 'light-box';
+  $imageLightBox.src = 'psdHTML.png';
+  $lightBox.appendChild($imageLightBox);
   $holder.appendChild($lightBox);
-  var $closeButton = document.getElementById('close-button');
-  var $openButton = document.getElementById('open-button');
+
+  var $closeButton = document.createElement('div');
+  $closeButton.id = 'close-button';
+  $buttonClose = document.createElement('button');
+  $closeButton.appendChild($buttonClose);
+  $imageClose = document.createElement('img');
+  $imageClose.src = 'closeButton.gif';
+  $buttonClose.appendChild($imageClose); 
+  $holder.appendChild($closeButton);
+  
 
   $closeButton.addEventListener("click", function(){ 
-  	$holder.style.display = 'none'; 
+    $holder.style.display = 'none'; 
   });
 
   $openButton.addEventListener("click", function(){ 
+    
    $holder.style.display = 'block';
+   $holder.style.top = 0 ;
+
+
   });
 
 </script>
